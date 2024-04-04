@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Calculator</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <input type="number" placeholder="Enter 1st Number" id="input1" />
+        <input type="number" placeholder="Enter 2st Number" id="input2" />
+
+        <h1>Result: <span id="result">0</span></h1>
+      </div>
+      <br /><br /><br />
+      <button id="add">Add</button>
+      <button id="sub">Subtract</button>
+      <button id="mul">Multiply</button>
+      <button id="div">Divide</button>
+    </main>
+
+    <script>
+      let input1 = document.getElementById("input1");
+      let input2 = document.getElementById("input2");
+      let Result = document.getElementById("result");
+      let addBtn = document.getElementById("add");
+      let subBtn = document.getElementById("sub");
+      let mulBtn = document.getElementById("mul");
+      let divBtn = document.getElementById("div");
+
+      // let input2Data = input1.value;
+
+      Result.textContent = 0;
+
+      addBtn.addEventListener("click", () => {
+        Result.textContent = +input1.value + +input2.value;
+        alert(Result.textContent);
+      });
+
+      subBtn.addEventListener("click", () => {
+        Result.textContent = input1.value - input2.value;
+        alert(Result.textContent);
+      });
+
+      mulBtn.addEventListener("click", () => {
+        Result.textContent = input1.value * input2.value;
+        alert(Result.textContent);
+      });
+
+      divBtn.addEventListener("click", () => {
+        Result.textContent = input1.value / input2.value;
+        alert(Result.textContent);
+      });
+    </script>
+  </body>
+</html>
